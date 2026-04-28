@@ -1,8 +1,8 @@
 .hero-image-wrap{
-    width: 190px;
-    max-width: 190px;
-    height: 190px;
-    max-height: 190px;
+    width: 220px;
+    max-width: 220px;
+    height: 220px;
+    max-height: 220px;
     border-radius: 50%;
     overflow: visible;
 }
@@ -15,20 +15,85 @@
     display: block;
 }
 
-.home2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-}
-
 .hero-image-wrap::before{
-    inset: -6px;
-    filter: blur(1.2px);
+    inset: -8px;
+    filter: blur(2px);
 }
 
 .hero-image-wrap::after{
-    inset: -5px;
-    padding: 1.5px;
-    filter: blur(0.4px);
+    inset: -6px;
+    padding: 2px;
+    filter: blur(0.6px);
+}
+
+.profile-page #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.profile-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 64px);
+    padding: 40px 20px;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 50px 40px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.music-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.music-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+@media (min-width: 768px) {
+    .profile-card {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .profile-text {
+        align-items: flex-start;
+    }
 }
